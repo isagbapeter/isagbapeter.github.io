@@ -127,7 +127,7 @@ a:hover {
 }
 
 /* Projects Section */
-#projects, #certs{
+#projects, #certs {
     width: 90%;
 	margin: auto;
 	text-align: center;
@@ -142,26 +142,52 @@ a:hover {
 
 .project-card, .certs-card {
     flex-basis: 32%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    margin-bottom: 30px;
+	border-radius: 5px;
+	margin-bottom: 30px;
 	margin-right: 1%;
-    text-align: center;
+	position: relative;
+	overflow: hidden;
     transition: box-shadow 0.3s; /* Animation only for shadow */
 }
 
-.project-card img,  .certs-card img {
+.project-card img, .certs-card img {
     width: 100%;
 	display: block;
-    transition: transform 0.3s; /* Hover effect only for images */
 }
 
 .project-card:hover, .certs-card:hover {
     transform: scale(1.05);
 }
 
+.layer{
+    background: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+
+.layer:hover{
+	background: rgba(226,0,0,0.7);
+}
+
 .layer h3 {
-    color: black;
+    width: 100%;
+	font-weight: 500;
+	color: white;
+	font-size: 26px;
+	bottom: 0%;
+	left: 50%;
+	transform: translate(-50%);
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+}
+.layer:hover h3{
+	bottom: 49%;
+	opacity: 1;
 }
 
 /* Footer */
@@ -235,16 +261,10 @@ footer {
     .projects-grid, .certs-grid {
         grid-template-columns: repeat(4, 1fr); /* Display 4 projects per row */
     }
+    .project-card img, .certs-card img {
+         height: 300px;
+        }
 
-    
+
     }
     
-
-
-
-
-
-
-
-
-  
