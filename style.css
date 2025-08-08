@@ -170,7 +170,8 @@ a:hover {
 }
 
 .layer:hover{
-	background: rgba(226,0,0,0.7);
+	background: rgba(128,128,128,0.7);
+    backdrop-filter: blur(6px);
 }
 
 .layer h3 {
@@ -267,4 +268,5 @@ footer {
 
 
     }
+
     
